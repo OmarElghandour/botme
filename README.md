@@ -1,4 +1,10 @@
 Botme
 =====
 
-A Symfony project created on November 1, 2017, 12:57 am.
+The world's first CMS for bots
+
+## Pre-installation
+
+
+### Installation
+$ git clone git@github.com:morecreativeltd/Botme.git

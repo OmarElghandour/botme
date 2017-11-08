@@ -6,5 +6,7 @@ The world's first CMS for bots
 ## Pre-installation
 
 
-### Installation
+## Installation
 $ git clone git@github.com:morecreativeltd/Botme.git
+$ cd Botme
+$ composer install

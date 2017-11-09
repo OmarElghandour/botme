@@ -1,6 +1,6 @@
 <?php
 
-namespace FrontendBundle\Entity;
+namespace BackendBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * newsletter
  *
  * @ORM\Table(name="newsletter")
- * @ORM\Entity(repositoryClass="FrontendBundle\Repository\newsletterRepository")
+ * @ORM\Entity(repositoryClass="BackendBundle\Repository\newsletterRepository")
  */
 class NewsLetter
 {

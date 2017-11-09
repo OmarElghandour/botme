@@ -1,4 +1,12 @@
 vendor/*
-.idea/*
 var/*
 app/config/parameters.yml
+
+# Environment files start #
+.buildpath
+.settings
+php_errors*
+nbproject/*
+.project
+.idea/*
+# Environment files end #

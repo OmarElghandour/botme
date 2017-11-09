@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table(name="newsletter")
  * @ORM\Entity(repositoryClass="BackendBundle\Repository\newsletterRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class NewsLetter
 {
@@ -123,6 +124,25 @@ class NewsLetter
     public function getUpdatedAt()
     {
         return $this->updatedAt;
+    }
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function prePersist()
+    {
+        $this->addedAt = new \DateTime();
+        if (!$this->updatedAt) {
+            $this->updatedAt = new \DateTime();
+        }
+    }
+
+    /**
+     * @ORM\PreUpdate
+     */
+    public function preUpdate()
+    {
+        $this->updatedAt = new \DateTime();
     }
 }
 

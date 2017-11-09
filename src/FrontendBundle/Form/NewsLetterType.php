@@ -11,6 +11,7 @@ namespace FrontendBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class NewsLetterType extends AbstractType
 {
@@ -18,13 +19,14 @@ class NewsLetterType extends AbstractType
     {
         $builder
             ->add('email')
+            ->add('submit',SubmitType::class)
         ;
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => '@FrontendBundle:NewsLetter'
+            'data_class' => 'BackendBundle\Entity\NewsLetter'
         ));
     }
 }
